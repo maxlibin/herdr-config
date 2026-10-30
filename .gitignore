@@ -1,0 +1,12 @@
+# Only the config and status bar scripts are tracked; herdr's runtime files
+# (logs, sockets, sessions, snapshots, release notes) and build output are not.
+/*
+!/.gitignore
+!/README.md
+!/LICENSE
+!/config.toml
+!/*.sh
+!/next-event/
+/next-event/*
+!/next-event/main.swift
+!/next-event/Info.plist
