@@ -1,6 +1,6 @@
-// Prints the next (or current) timed calendar event within 24 hours for the
-// herdr tab bar, e.g. "📅 Standup in 12m", "📅 Standup now", "📅 Lunch 13:30".
-// Prints nothing when the day ahead is free. Exits non-zero without access.
+// Prints the next (or current) timed calendar event within 7 days for the
+// herdr tab bar, e.g. "📅 Standup in 12m", "📅 Standup now", "📅 Lunch 13:30", "📅 Standup Mon 10:00".
+// Prints nothing when the week ahead is free. Exits non-zero without access.
 import EventKit
 import Foundation
 
@@ -19,7 +19,7 @@ guard hasAccess else {
 }
 
 let now = Date()
-let predicate = store.predicateForEvents(withStart: now, end: now.addingTimeInterval(24 * 3600), calendars: nil)
+let predicate = store.predicateForEvents(withStart: now, end: now.addingTimeInterval(7 * 24 * 3600), calendars: nil)
 let upcoming = store.events(matching: predicate)
     .filter { !$0.isAllDay && $0.endDate > now && $0.status != .canceled }
     .sorted { $0.startDate < $1.startDate }

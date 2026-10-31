@@ -40,6 +40,6 @@ herdr's runtime files (logs, sockets, sessions) are git-ignored.
 | `git-status.sh` | git summary of the focused pane (uses `git-summary.sh`) |
 | `git-sidebar.sh` | reports each pane's git state to the sidebar `$git_clean` / `$git_dirty` / `$git_behind` icon tokens and `$git` summary; prints nothing |
 | `ai-usage.sh` | Claude 5-hour / weekly usage, 🟡 / 🔴 above 60% / 85% |
-| `next-event/main.swift` | next timed calendar event within 24 hours |
+| `next-event/main.swift` | next timed calendar event within 7 days |
 | `memory.sh` | memory used like Activity Monitor |
 | `cpu.sh` | CPU busy percentage |
