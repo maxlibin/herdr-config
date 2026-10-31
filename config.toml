@@ -21,7 +21,12 @@ tab_bar_right_separator = " │ "
 rows = [
   ["state_icon", "machine", "workspace", "tab"],
   ["agent"],
-  [{ token = "$git", dim = true }],
+  [
+    { token = "$git_clean", fg = "#b8bb26" },
+    { token = "$git_dirty", fg = "#fabd2f" },
+    { token = "$git_behind", fg = "#fb4934" },
+    { token = "$git", dim = true },
+  ],
 ]
 
 [ui.toast]
